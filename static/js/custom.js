@@ -11,7 +11,7 @@
 	 * Pre load
 	/* ---------------------------------------------- */
 	NAY.PreLoad = function() {
-		document.getElementById("loading").style.display = "none"; 
+		document.getElementById("loading").style.display = "none";
 	}
 
     /*--------------------
@@ -45,7 +45,7 @@
 	 * Header Fixed
 	/* ---------------------------------------------- */
 	NAY.HeaderFixd = function() {
-		var HscrollTop  = $(window).scrollTop();  
+		var HscrollTop  = $(window).scrollTop();
 	    if (HscrollTop >= 100) {
 	       $('header').addClass('fixed-header');
 	    }
@@ -115,7 +115,7 @@
 
 	NAY.HeaderHeight = function(){
 		var HHeight = $('.header-height .fixed-header-bar').height()
-	    $('.header-height').css("min-height", HHeight);	
+	    $('.header-height').css("min-height", HHeight);
 	}
 
 	/* ---------------------------------------------- /*
@@ -123,7 +123,7 @@
 	/* ---------------------------------------------- */
 
 	NAY.MegaMenu = function() {
-		var mDropdown = $(".m-dropdown-toggle") 
+		var mDropdown = $(".m-dropdown-toggle")
 		mDropdown.on("click", function() {
 	        $(this).parent().toggleClass("open-menu-parent");
 	        $(this).next('ul').toggleClass("open-menu");
@@ -162,16 +162,16 @@
 	 NAY.Counter = function () {
 	  var counter = jQuery(".counter");
 	  var $counter = $('.counter');
-	  if(counter.length > 0) {  
+	  if(counter.length > 0) {
 	      loadScript(plugin_track + 'counter/jquery.countTo.js', function() {
 	        $counter.each(function () {
-	         var $elem = $(this);                 
+	         var $elem = $(this);
 	           $elem.appear(function () {
 	             $elem.find('.count').countTo({
 	             	speed: 2000,
     				refreshInterval: 10
 	             });
-	          });                  
+	          });
 	        });
 	      });
 	    }
@@ -183,7 +183,7 @@
     ----------------------*/
     NAY.Owl = function () {
       var owlslider = jQuery("div.owl-carousel");
-      if(owlslider.length > 0) {  
+      if(owlslider.length > 0) {
          loadScript(plugin_track + 'owl-carousel/js/owl.carousel.min.js', function() {
            owlslider.each(function () {
             var $this = $(this),
@@ -196,8 +196,8 @@
                 $smartspeed = ($this.attr('data-smartspeed')) ? $this.data('smartspeed') : 1000,
                 $autohgt = ($this.data('autoheight')) ? $this.data('autoheight') : false,
                 $CenterSlider = ($this.data('center')) ? $this.data('center') : false,
-                $space = ($this.attr('data-space')) ? $this.data('space') : 30;    
-           
+                $space = ($this.attr('data-space')) ? $this.data('space') : 30;
+
                 $(this).owlCarousel({
                     loop: $loop,
                     items: $items,
@@ -217,9 +217,9 @@
                     nav: $navarrow,
                     navText:["<i class='ti-arrow-left'></i>","<i class='ti-arrow-right'></i>"],
                     autoplay: $autoplay,
-                    autoplayHoverPause: true   
-                }); 
-           }); 
+                    autoplayHoverPause: true
+                });
+           });
          });
       }
     }
@@ -243,7 +243,7 @@
 				            navigateByImgClick: true,
 				            preload: [0, 1] // Will preload 0 - before current, and 1 after NAY current image
 				        }
-				    });	
+				    });
     			}
     			if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
 		            $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -290,7 +290,7 @@
 	}
 
 	/*--------------------
-        * Progress Bar 
+        * Progress Bar
     ----------------------*/
     NAY.ProgressBar = function(){
         $(".skill-bar .skill-bar-in").each(function () {
@@ -341,7 +341,7 @@
 		              'Developer'
 		            ],
 		            breakLines: false
-		        }); 
+		        });
             });
         }
     }
@@ -375,7 +375,7 @@
 		NAY.PreLoad();
 	});
 	// Document on Ready
-	$(document).on("ready", function(){				
+	$(document).on("ready", function(){
     NAY.particles(),
     NAY.VideoBG(),
 		NAY.HeaderFixd(),
@@ -405,5 +405,42 @@
 		NAY.HeaderHeight();
 	});
 
+  // Modal
+	function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 
 })(jQuery);
