@@ -405,7 +405,5 @@
 		NAY.HeaderHeight();
 	});
 
-  // Modal
-	
 
 })(jQuery);
