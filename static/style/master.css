@@ -27,11 +27,13 @@ Table of contents
 23) form
 24) list
 25) space
+26) modal
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
 /*----------------------------------
 * Buttons
 ----------------------------------*/
+
 .m-btn-link {
   display: inline-block;
   text-decoration: none;
@@ -3958,6 +3960,7 @@ h6 {
   .md-p-100px-b {
     padding-bottom: 100px; } }
 @media (max-width: 767px) {
+
   /* Margin Padding
   --------------------*/
   .sm-m-0px {
@@ -5054,6 +5057,7 @@ h6 {
   100% {
     top: 25px;
     opacity: 0; } }
+
 /* Home Banner 2
 ----------------------*/
 .home-banner-02 {
@@ -5568,4 +5572,7 @@ h6 {
     margin: 0;
     font-size: 14px; }
 
-/*# sourceMappingURL=master.css.map */
+    /* ----------------------
+    *	Modal
+    ---------------------------*/
+  /*# sourceMappingURL=master.css.map */
