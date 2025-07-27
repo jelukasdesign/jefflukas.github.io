@@ -5,7 +5,7 @@ function send_mail() {
     var message = jQuery("#message").val();
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var flag = 0;
-    if (name == "jlukas.design@gmail.com") {
+    if (name == "") {
         jQuery("#name").addClass('invalid');
         jQuery("#val_user_name").html("Your Name is Required");
         flag = 1;
