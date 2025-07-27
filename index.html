@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
 <head>
     <!-- metas -->
     <meta charset="utf-8">
     <meta name="author" content="themepaa">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Tony - Portfolio Template">
-    <meta name="description" content="Tony - Portfolio Template">
+    <meta name="keywords" content="Jeff Lukas - Portfolio Template">
+    <meta name="description" content="Jeff Lukas - Portfolio Template">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- title -->
     <title>Jeff Lukas - Portfolio</title>
@@ -20,9 +20,10 @@
     <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
     <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
     <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link rel="stylesheet" href="gallery-grid.css">
     <!-- theme css -->
@@ -31,16 +32,17 @@
 <!-- Body Start -->
 
 <body data-spy="scroll" data-target="#navbar-collapse-toggle" data-offset="70">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <!-- page loading -->
     <div id="loading">
         <div class="load-circle"><span class="one"></span></div>
     </div>
     <!-- end page loading -->
     <header>
-        <nav class="navbar header-nav header-dark navbar-expand-lg">
+        <nav class="navbar header-nav header-dark header-transparent navbar-expand-lg">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">Jeff Lukas <span class="theme-bg"></span></a>
+                <a class="navbar-brand" href="index.html">Jeff Lukas <span class="theme-bg"></span></a>
                 <!-- / -->
                 <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-toggle" aria-controls="navbar-collapse-toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -240,6 +242,12 @@
                         </div>
                   </div>
             </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+            <script>
+                baguetteBox.run('.tz-gallery');
+            </script>
+
         </section>
         <!-- End fun -->
 
@@ -263,16 +271,16 @@
 
                   <div class="row">
                       <div class="col-sm-6 col-md-4">
-                        <a class="lightbox" href="../images/park.jpg">
+                        <a class="lightbox" href="static/img/branding.jpg">
                             <img src="static/img/branding.jpg" alt="Park">
                         </a>
                         <a class="link-overlay" href="#">
                         <div class="portfolio-info">
                                 <h5>Logos & Branding</h5>
                                 <span>Design</span>
-                                </div>
-                                </a>
-                    </div>
+                              </div>
+                            </a>
+                          </div>
 
                     <div class="col-sm-6 col-md-4">
                         <a class="lightbox" href="../images/bridge.jpg">
@@ -420,6 +428,10 @@
         </div>
       </footer>
       <!-- footer End -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+      <script>
+          baguetteBox.run('.tz-gallery');
+      </script>
       <!-- jquery -->
       <script src="static/js/jquery-3.2.1.min.js"></script>
       <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
