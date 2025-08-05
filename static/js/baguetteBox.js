@@ -1,12 +1,3 @@
-/*!
- * baguetteBox.js
- * @author  feimosi
- * @version %%INJECT_VERSION%%
- * @url https://github.com/feimosi/baguetteBox.js
- */
-
-/* global define, module */
-
 (function (root, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -686,10 +677,7 @@
     }
 
     function updateOffset() {
-        var isRtl = document.querySelectorAll('html')[0].getAttribute('dir') === 'rtl';
-        var percentage = isRtl ? -100 : 100;
-        var offset = -currentIndex * percentage + '%';
-
+        var offset = -currentIndex * 100 + '%';
         if (options.animation === 'fadeIn') {
             slider.style.opacity = 0;
             setTimeout(function() {
@@ -803,3 +791,10 @@
         destroy: destroyPlugin
     };
 }));
+
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.12.0
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
